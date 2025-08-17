@@ -17,7 +17,7 @@ ipykernel==6.29.5
 
 Tujuan: menulis data “Common Information” (FAQ pembelian/pengiriman/refund) ke MongoDB Atlas dengan embedding.
 
-Inti langkah:
+Langkah:
 
 Load env (MONGO_CONNECTION_STRING).
 
@@ -38,7 +38,7 @@ Tujuan: membangun pipeline RAG untuk menjawab pertanyaan umum dari koleksi di at
 Komponen:
 SentenceTransformersTextEmbedder → MongoDBAtlasEmbeddingRetriever(top_k=6) → ChatPromptBuilder → OpenAIChatGenerator.
 
-Inti langkah:
+Langkah:
 
 Load env (OPENAI_API_KEY, MONGO_CONNECTION_STRING).
 
@@ -54,7 +54,7 @@ Output: string jawaban (contoh query: “Bagaimana proses refund di toko ini?”
 
 Tujuan: menambahkan tool common_information_tool ke Agent dan routing otomatis.
 
-Inti langkah:
+Langkah:
 
 Buat CommonInfoToolPipeline (mini RAG seperti di atas) + pipeline.warm_up().
 
